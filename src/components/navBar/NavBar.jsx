@@ -17,7 +17,7 @@ const NavBarr = () => {
                 className="linkClassLucas"
                 to="/categoria/AceitesEscenciales"
               >
-                Aceites Escenciales{" "}
+                Aceites Esenciales{" "}
               </LinkReactRd>
               <LinkReactRd className="linkClassLucas" to="/categoria/Cremas">
                 Cremas

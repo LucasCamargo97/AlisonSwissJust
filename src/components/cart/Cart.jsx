@@ -7,7 +7,7 @@ import "firebase/firestore";
 import { Form, Row, Col, Button } from "react-bootstrap";
 
 const Cart = () => {
-  const { cartList, cleanList, totalCount } = useCartContext();
+  const { cartList, cleanList, totalCount, totalPrice } = useCartContext();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -68,6 +68,9 @@ const Cart = () => {
             >
               Eliminar todos los articulos
             </button>
+            <div>
+              <h1>Total a pagar ${totalPrice} </h1>
+            </div>
           </div>
         )}
         <div>
