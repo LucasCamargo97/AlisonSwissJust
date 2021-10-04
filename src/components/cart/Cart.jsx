@@ -7,7 +7,7 @@ import "firebase/firestore";
 import { Form, Row, Col, Button } from "react-bootstrap";
 
 const Cart = () => {
-  const { cartList, cleanList, totalCount, totalPrice } = useCartContext();
+  const { cartList, cleanList, totalCount, totalPrice, showOrderId } = useCartContext();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -76,8 +76,8 @@ const Cart = () => {
         <div>
           <div className="divForm1">
             <div className="divForm2">
-              <h2>Contacto</h2>
-              <Form onSubmit={theSubmit} onChange={onChangeFunc}>
+              <h2>Datos para la compra</h2>
+              <Form onSubmit={theSubmit}{...showOrderId} onChange={onChangeFunc}>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
                     <Form.Label>Name</Form.Label>
