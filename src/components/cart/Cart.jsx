@@ -69,7 +69,7 @@ const Cart = () => {
               Eliminar todos los articulos
             </button>
             <div>
-              <h1>Total a pagar ${totalPrice} </h1>
+              <h1>Total a pagar $ {totalPrice()}</h1>
             </div>
           </div>
         )}
