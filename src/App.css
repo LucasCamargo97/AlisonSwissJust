@@ -96,3 +96,16 @@
 .divForm2{
   width: 25%;
 }
+.imgCart{
+  height: 70px;
+  width: 70px;
+}
+.divItemCart{
+  width: 50%;
+}
+
+.TdItemCart{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

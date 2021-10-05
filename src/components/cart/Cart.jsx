@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useCartContext } from "../context/cartContext";
-import Item from "../items/Item";
+import ItemCart from "../items/ItemCart";
 import { getFirestore } from "../../services/getFirebase";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { Form, Row, Col, Button } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const Cart = () => {
   const { cartList, cleanList, totalCount, totalPrice, showOrderId } = useCartContext();
@@ -16,8 +17,6 @@ const Cart = () => {
 
   const theSubmit = (e) => {
     e.preventDefault();
-    const dbQuery = getFirestore();
-    const ordersC = dbQuery.collection("orders");
     let order = {};
     order.date = firebase.firestore.Timestamp.fromDate(new Date());
     order.buyer = formData;
@@ -53,14 +52,15 @@ const Cart = () => {
           <h1>Tu carrito esta vacio!!</h1>
         ) : (
           <div>
+            <h1>Aqui estan sus productos:</h1>
             {" "}
             {cartList.map((item) => (
-              <Item
+              <ItemCart
                 key={item.item.id}
                 product={item.item}
                 quantity={item.cantidad}
                 isCartList
-              ></Item>
+              ></ItemCart>
             ))}
             <button
               className="botonContador btn btn-danger"
@@ -108,10 +108,12 @@ const Cart = () => {
                     />
                   </Form.Group>
                 </Row>
+                <Link to='/CartFinishScreen'>
+                  <Button type="submit" variant="primary">
+                    Terminar Compra
+                  </Button>
+                </Link>
 
-                <Button type="submit" variant="primary">
-                  Terminar Compra
-                </Button>
               </Form>
             </div>
           </div>

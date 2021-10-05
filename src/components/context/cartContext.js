@@ -1,6 +1,5 @@
 import {useState, createContext, useContext} from 'react';
 import { getFirestore } from "../../services/getFirebase";
-import firebase from "firebase/app";
 import "firebase/firestore";
 
 export const cartContext = createContext([])

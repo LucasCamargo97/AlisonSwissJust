@@ -7,6 +7,7 @@ import NavBarr from  './components/navBar/NavBar.jsx';
 import ItemListContainer from './components/containers/ItemListContainer';
 import ItemDetailContainer from './components/containers/ItemDetailContainer';
 import CartContextProvider from './components/context/cartContext';
+import CartFinishScreen from './components/cart/CartFinishScreen';
 
 export const ContextApp = createContext();
 
@@ -38,6 +39,8 @@ function App() {
                             <Route exact path='/item/:id' component= {ItemDetailContainer}/>
 
                             <Route exact path='/cart' component={Cart}/>
+
+                            <Route exact patch='/CartFinishScreen' component={CartFinishScreen}/>
 
                         </Switch>
                   </div>
