@@ -77,7 +77,7 @@ const Cart = () => {
           <div className="divForm1">
             <div className="divForm2">
               <h2>Datos para la compra</h2>
-              <Form onSubmit={theSubmit}{...showOrderId} onChange={onChangeFunc}>
+              <Form onSubmit={theSubmit} onChange={onChangeFunc}>
                 <Row className="mb-3">
                   <Form.Group as={Col}>
                     <Form.Label>Name</Form.Label>
