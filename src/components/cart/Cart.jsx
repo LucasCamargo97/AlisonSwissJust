@@ -109,11 +109,10 @@ const Cart = () => {
                   </Form.Group>
                 </Row>
                 <Link to='/CartFinishScreen'>
-                  <Button type="submit" variant="primary">
+                  <Button type="submit" onClick={cleanList} variant="primary">
                     Terminar Compra
                   </Button>
                 </Link>
-
               </Form>
             </div>
           </div>
