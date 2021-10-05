@@ -8,7 +8,7 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 const Cart = () => {
-  const { cartList, cleanList, totalCount, totalPrice, showOrderId } = useCartContext();
+  const { cartList, cleanList, totalCount, totalPrice } = useCartContext();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",

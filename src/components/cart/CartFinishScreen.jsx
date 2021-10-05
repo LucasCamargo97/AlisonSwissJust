@@ -12,11 +12,7 @@ function CartFinishScreen() {
       dbQuery
         .collection("orders")
         .get()
-        .then((resp) => {
-          setOrder(
-            resp.docs.map((order) => ({ id: order.id, ...order.data() }))
-          )}
-        })
+        .then((resp) => {setOrder(resp.docs.map((order) => ({ id: order.id, ...order.data() })))})})
     
     return (
         <div>
@@ -26,8 +22,7 @@ function CartFinishScreen() {
                 <Button variant= "primary">Volver al inicio</Button>
             </Link>
         </div>
-    )
-}
+    )}
 
 
 export default CartFinishScreen
