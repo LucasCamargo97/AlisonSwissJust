@@ -1,28 +1,23 @@
+import { useState } from "react";
+import { useCartContext } from "../context/cartContext";
 import { getFirestore } from "../../services/getFirebase";
+import firebase from "firebase/app";
 import "firebase/firestore";
-import {Link} from "react-router-dom";
-import {Button}  from 'react-bootstrap'
-import {useState, useEffect} from 'react'
+import {Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function CartFinishScreen() {
-    const [order, setOrder] = useState();
+const CartFinishScreen = () => {
+  const {cleanList} = useCartContext();
 
-    useEffect(() => {
-        const dbQuery = getFirestore();
-      dbQuery
-        .collection("orders")
-        .get()
-        .then((resp) => {setOrder(resp.docs.map((order) => ({ id: order.id, ...order.data() })))})})
-    
-    return (
-        <div>
-            <h1>el ID de su compra es {`${order.id}`} </h1>
-            <h2>GRACIAS POR SU COMPRA!</h2>
-            <Link to='/'>
-                <Button variant= "primary">Volver al inicio</Button>
-            </Link>
-        </div>
-    )}
+  return (
+    <div>
+      <h1>Listo su codigo de orden es: {}</h1>
+      <Link to='/'>
+        <Button onClick={cleanList()}></Button>
+      </Link>
+      
+    </div>
+  )
+  }
 
-
-export default CartFinishScreen
+export default CartFinishScreen;

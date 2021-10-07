@@ -85,6 +85,7 @@ const Cart = () => {
                       type="text"
                       name="name"
                       placeholder="Ingrese su nombre"
+                      required
                     />
                   </Form.Group>
                 </Row>
@@ -95,6 +96,7 @@ const Cart = () => {
                       type="text"
                       name="phone"
                       placeholder="Ingrese su celular"
+                      required
                     />
                   </Form.Group>
                 </Row>
@@ -105,11 +107,12 @@ const Cart = () => {
                       type="text"
                       name="email"
                       placeholder="Ingrese su email"
+                      required
                     />
                   </Form.Group>
                 </Row>
                 <Link to='/CartFinishScreen'>
-                  <Button type="submit" onClick={cleanList} variant="primary">
+                  <Button type="submit" variant="primary">
                     Terminar Compra
                   </Button>
                 </Link>
