@@ -112,11 +112,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-.finishButton{
-  height: 100px;
-  width: 250px;
-  font-size: 80px;
-}
 .cardText{
   font-family: 'Nunito', sans-serif;
   font-weight: bolder;
