@@ -13,5 +13,5 @@ con la utilizacion de algunas librerias externas.
 
 # Instalacion y demo
 
-Puedes instalar node y las dependecias de este proyecto para correrlo localmente o bien puedes entrar a este [link]("https://tender-brahmagupta-544d6a.netlify.app/")
+Puedes instalar node y las dependecias de este proyecto para correrlo localmente o bien puedes entrar a este [link](https://tender-brahmagupta-544d6a.netlify.app/)
 para ver una demo.
