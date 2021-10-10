@@ -7,7 +7,7 @@ const ItemCart = ({ product, quantity }) => {
 
   return (
       <div className='divItemCart'>
-          <Table striped bordered hover>
+          <Table className='tableItem' striped bordered hover>
                 <thead>
                   <tr>
                     <th></th>
@@ -19,9 +19,9 @@ const ItemCart = ({ product, quantity }) => {
                 <tbody>
                   <tr>
                     <td><img className='imgCart' src={product.foto} alt="" /></td>
-                    <td>{product.title}</td>
-                    <td>{quantity}</td>
-                    <td>{product.price}</td>
+                    <td className='tdText'>{product.title}</td>
+                    <td className='tdText'>{quantity}</td>
+                    <td className='tdText'>{product.price}</td>
                     <td className='TdItemCart'>
                       <Link to={`/Item/${product.id}`}>
                         <button className="btn btn-primary btn-block">Detalles</button>

@@ -1,31 +1,17 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(85,88,232,1) 0%, rgba(0,255,218,1) 100%);
+  border-color: black 2px;
 }
 
 .acumuladorCart{
@@ -33,42 +19,79 @@
   background-color: red;
   color: white;
 }
-.greeting{
-  font-size: 25px;
+
+.navBar{
+  background-color: white;
+}
+.navbarTitle{
+  font-family: 'Akronim', cursive;
+  font-size: 60px;
+  margin-top: 20px;
+  color: red;
+}
+.divIcons{
+  text-align: center;
+}
+.navbarIcons{
+  color: red;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.tableItem{
+  background-color: white;
+  border: 10px solid;
 }
 .linkClassLucas{
   display: block;
   margin-top: 10px;
-  color: gray;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   margin-right: 1rem;
   text-decoration: none;
   white-space: nowrap;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 40px;
 }
 .linkTituloLucas{
   text-decoration: none;
 }
 
 .greeting{
+  font-size: 60px;
   align-items: center;
   text-align: center;
   justify-content: center;
+  font-family: 'Caveat', cursive;
 }
-
+.itemDetail{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .grid-responsive{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  margin: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardStyle{
+  margin: 10px;
+}
+.zoom {
+  transition: transform .2s; 
+}
+.zoom:hover {
+  transform: scale(1.5); 
+  border: solid black;
+}
+.cart{
+  color: black;
 }
 .cartWidgetCantDiv{
   background-color: red;
@@ -83,9 +106,25 @@
   font-weight: bold;
   color: white;
   text-align: center;
-
 }
-
+.cartFinishScreen{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.finishButton{
+  height: 100px;
+  width: 250px;
+  font-size: 80px;
+}
+.cardText{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+}
+.formTitleText{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+}
 .divForm1{
   display: flex;
   align-items: center;
@@ -108,4 +147,33 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.tdText{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:480px){
+  .divForm2{
+  width: 80%;
+  }
+  .ItemCart{
+    width: 80px;
+    margin-right: 450px;
+  }
+  .imgCart{
+    height: 45px;
+    width: 45px;
+  }
+  .tdText{
+  font-size: 13px;
+  }
+  .divItemCart{
+    width: 80px;
+  }
+  .imgFinishScreen{
+    height: 400px;
+    width: 400px;
+  }
 }

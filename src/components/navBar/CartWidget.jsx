@@ -13,7 +13,7 @@ function CartWidget() {
 
     return (
         <div>
-                <Cart4 size={30}/>
+                <Cart4 className='cart' size={40}/>
                 <div className="cartWidgetCantDiv"><h2 className="cartWidgetCantText">{totalCount}</h2></div>
         </div>
     )

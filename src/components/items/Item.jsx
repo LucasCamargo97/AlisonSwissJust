@@ -13,14 +13,14 @@ const Item = ({ product, isCartList, quantity }) => {
   return (
     <>
       <div className="d-flex align-items-center">
-        <Card style={{ width: "20rem" }}>
+        <Card className='cardStyle' style={{ width: "20rem" }}>
           <div key={product.id} className="card w-10 mt-3">
-            <div className="card-header">{product.title}</div>
-            <div className="card-body">
-              <Card.Img variant="top" src={product.foto} />
+            <div className="cardText card-header">{product.title}</div>
+            <div className="cardText card-body">
+              <Card.Img className='zoom' variant="top" src={product.foto} />
             </div>
-            <div className="card-body"> Precio : {product.price}</div>
-            <div className="card-footer">
+            <div className="cardText card-body"> Precio : ${product.price}</div>
+            <div className="cardText card-footer">
               <Link to={`/Item/${product.id}`}>
                 <button className="btn btn-primary btn-block">Detalles</button>
               </Link>

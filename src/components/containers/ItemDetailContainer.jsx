@@ -18,22 +18,6 @@ const ItemDetailContainer = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   });
-  // Sin Firebase
-  // useEffect(() => {
-  //     newFetch
-  //         .then((res)=> {
-  //             if (id){
-  //                 const itemFil = res.filter((item) => item.id
-  //                 === parseInt(id))
-  //                 setItem(itemFil)
-  //                 .finally(()=> setLoading(false))
-  //             } else {
-  //                 setItem(res)
-  //             }
-  //         })
-  //         .catch((err) => console.error(err))
-  //         .finally(()=> setLoading(false))
-  //     },[id])
 
   return (
     <>{loading ? <h2>Cargando...</h2> : item && <ItemDetail item={item} />}</>

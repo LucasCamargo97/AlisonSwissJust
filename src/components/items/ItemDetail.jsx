@@ -14,16 +14,17 @@ const ItemDetail = ({item}) => {
 
     return (
         <div>
-            <div className='d-flex align-items-center'>
-                <Card style={{ width: '20rem' }}>
+            <div className='d-flex align-items-center itemDetail'>
+                <Card style={{ width: '25rem' }}>
                 <div key= {item.id} className='card w-10 mt-3'>
-                    <div className='card-header'>{item.title}</div>
-                    <div className='card-body'>
-                    <Card.Img variant="top" src={item.foto}/>
+                    <div className='cardText card-header'>{item.title}</div>
+                    <div className='cardText card-body'>
+                    <Card.Img className='zoom' variant="top" src={item.foto}/>
                     </div>
-                    <div className='card-body'> Precio : {item.price}</div>
-                    <div className='card-footer'>
-                        <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                    <div className='cardText card-body'>{item.descripcion}</div>
+                    <div className='cardText card-body'> Precio : ${item.price}</div>
+                    <div className='cardText card-footer'>
+                        <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />
                     </div>
                 </div>
                 </Card>

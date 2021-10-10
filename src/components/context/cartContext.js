@@ -1,6 +1,4 @@
 import {useState, createContext, useContext} from 'react';
-import { getFirestore } from "../../services/getFirebase";
-import "firebase/firestore";
 
 export const cartContext = createContext([])
 
@@ -31,22 +29,11 @@ export default function CartContextProvider ({children}) {
         return cartList.reduce((acum, valor)=>(acum + (valor.cantidad * valor.item.price)), 0) 
     }
     
-    const showOrderId = () => {
-        const db = getFirestore();
-        const ordersCollection = db.collection("orders");
-          return <div><h1>Listo! su codigo de orden es: (ordersCollection.id)</h1></div> 
-    }
-
-
-
-
-    
 
     return(
         <cartContext.Provider value= { {
             cartList: cartList,
             totalCount: totalCount,
-            showOrderId,
             totalPrice,
             setTotalCount,
             addToCart,

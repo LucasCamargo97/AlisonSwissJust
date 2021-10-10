@@ -36,27 +36,11 @@ function ItemListContainer({ greeting }) {
         .finally(() => setLoading(false));
     }
 
-    // Sin Firebase
-    //     if (idCategoria){
-    //     newFetch
-    //     .then(respuesta => {
-    //     setProducts(respuesta.filter(prod => prod.categoria === idCategoria))
-    //     })
-    //     .catch(error => console.log(error))
-    //     .finally(()=> setLoading(false))
-    // } else {
-    //     newFetch
-    //     .then(respuesta => {
-    //     setProducts(respuesta)
-    //     })
-    //     .catch(error => console.log(error))
-    //     .finally(()=> setLoading(false))
-    // }
   }, [idCategoria]);
 
   return (
     <div>
-      <h1 className="greeting">{greeting}</h1>
+      <h1 className="greeting">Hola, bienvenido/a a nuestra tienda!</h1>
       <div className="grid-responsive">
         {loading ? (
           <h2 className="greeting">Cargando...</h2>
